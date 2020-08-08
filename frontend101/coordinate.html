@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: black;
+        /* overflow: hidden; */
+      }
+      :root {
+        --background-color: rgb(238, 212, 163);
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: var(--background-color);
+        margin-bottom: 4px;
+        border-radius: 4px;
+      }
+      .div {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="div"></div>
+    <div></div>
+    <div></div>
+    <script>
+      let elem = document.querySelector(".div");
+      let rect = elem.getBoundingClientRect();
+      elem.addEventListener("click", (event) => {
+        console.log(rect);
+        console.log(`client: ${event.clientX}, ${event.clientY}`);
+        console.log(`page: ${event.pageX}, ${event.pageY}`);
+      });
+    </script>
+  </body>
+</html>
