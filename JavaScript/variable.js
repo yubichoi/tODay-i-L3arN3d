@@ -1,5 +1,7 @@
+// 1.use strict
 "use strict";
 
+// 2. variable, rw(read/write)
 let globalName = "global name";
 {
   let name = "ellie";
@@ -20,7 +22,7 @@ console.log(globalName);
 }
 console.log(age);
 
-// 3. Constants
+// 3. Constants (read only)
 // favour immutable data type for a few reason
 // - security
 // - thread safety
