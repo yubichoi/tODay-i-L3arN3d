@@ -98,7 +98,7 @@ console.log(ellie1 === ellie3); //t
 // equality = puzzler
 console.log(0 == false); //t
 console.log(0 === false); //f 0 은 boolean 타입 아님
-console.log("" == false); //f
+console.log("" == false); //t
 console.log("" === false); //f ''은 boolean 타입이 아님
 console.log(null == undefined); //t
 console.log(null === undefined); //f 서로 다른 타입
