@@ -80,3 +80,28 @@ for (value of array) {
 
 // 7. fun cloning
 // object.assign(dest, [obj1, obj2, obj3..])
+const user = { name: "ellie", age: 20 };
+const user2 = user;
+user2.name = "coder";
+console.log(user); //이름 'coder'로 바뀜
+
+// old way
+const user3 = {};
+for (key in user) {
+  user3[key] = user[key];
+}
+console.clear();
+console.log(user3);
+
+// const user4 = {};
+// Object.assign(user4, user);
+const user4 = Object.assign({}, user);
+console.log(user4);
+
+// another example
+const fruit1 = { color: "red" };
+const fruit2 = { color: "blue", size: "big" };
+const mixed = Object.assign({}, fruit1, fruit2);
+console.log(mixed.color);
+console.log(mixed.size);
+//뒤에 나오는 애가 동일한 프로퍼티를 덮어 씀
